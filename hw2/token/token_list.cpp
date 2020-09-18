@@ -64,6 +64,13 @@ void TokenList ::push_back(Token value) {
 
 void TokenList ::insert(size_t index, Token value) {
     this->_size++;  // initially increment size for proper indexing
+    if(this->size() == 1){
+        this->head = make_shared<Item>(value);
+        this->head->next = this->head;
+        this->head->previous = this->head;
+        return;
+    }
+
     shared_ptr<Item> temp = this->head;
     for (size_t i = 0; i < (index % this->_size) - 1; i++) {  // iterates to correct address
         temp = temp->next;
