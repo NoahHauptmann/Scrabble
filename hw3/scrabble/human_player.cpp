@@ -132,7 +132,7 @@ void HumanPlayer::print_hand(ostream& out) const {
                 out << repeat(SPACE, 2) << FG_COLOR_LETTER << (char)toupper(it->letter) << repeat(SPACE, 2);
 
                 // Print score in bottom right
-            } else if (line == SQUARE_INNER_HEIGHT - 1) {
+           } else if (line == SQUARE_INNER_HEIGHT - 1) {
                 out << FG_COLOR_SCORE << repeat(SPACE, SQUARE_INNER_WIDTH - 2) << setw(2) << it->points;
 
             } else {

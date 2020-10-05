@@ -1,11 +1,9 @@
-COMPILER = g++ OPTIONS = -g - std = c++ 17 - Wall - Wextra COMPILE
-        = $(COMPILER) $(OPTIONS)
+COMPILER=g++
+OPTIONS=-g -std=c++17 -Wall -Wextra
+COMPILE=$(COMPILER) $(OPTIONS)
 
-                          main : main.cpp build
-                  / scrabble.o build / scrabble_config.o build / dictionary.o build / board.o build
-                  / board_square.o build / tile_bag.o build / tile_collection.o build / tile_kind.o build
-                  / player.o build / human_player.o build / move.o build / formatting.o $(COMPILE) $
-          < build/*.o -o scrabble
+main: main.cpp build/scrabble.o build/scrabble_config.o build/dictionary.o build/board.o build/board_square.o build/tile_bag.o build/tile_collection.o build/tile_kind.o build/player.o build/human_player.o build/move.o build/formatting.o
+	$(COMPILE) $< build/*.o -o scrabble
 
 build/scrabble.o: scrabble.cpp scrabble.h build/.make exceptions.h board.h tile_bag.h dictionary.h human_player.h scrabble_config.h move.h colors.h
 	$(COMPILE) -c $< -o $@
