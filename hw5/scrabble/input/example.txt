@@ -1,0 +1,18 @@
+4
+playerA
+n
+playerB
+n
+playerC
+y
+playerD
+y
+PLACE - 8 8 HIDE
+
+PLACE | 9 10 ESK
+
+
+
+PASS
+
+PASS
