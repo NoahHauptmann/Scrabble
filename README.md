@@ -6,4 +6,4 @@ C++, Inheritance, Object Oriented Design, Backtracking Search Algorithm
 
 ## Usage
 1. Build with makefile provided in the root directory
-2. ./main.cpp config.txt config.txt
+2. ./main.cpp config/config.txt
